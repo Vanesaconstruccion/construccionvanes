@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "Cd1w72A-YBerm9CG2wyFB"
+uri = "file://artifacts/construccion-web/src/assets/hero.png"
+type = "image"
+title = "Hero construction site dusk"
+
+[[generated]]
+id = "_MWyg4KOtarhjMc5DXDlL"
+uri = "file://artifacts/construccion-web/src/assets/project-1.png"
+type = "image"
+title = "Modern luxury villa"
+
+[[generated]]
+id = "JUleNEkvy7jOOtqrWoTLB"
+uri = "file://artifacts/construccion-web/src/assets/project-2.png"
+type = "image"
+title = "Corporate office under construction"
+
+[[generated]]
+id = "6MVNPwcxNWc1HOBm1S0hp"
+uri = "file://artifacts/construccion-web/src/assets/project-3.png"
+type = "image"
+title = "Minimalist interior space"
+
+[[generated]]
+id = "Nh7UHda0kIPSSX47_PHr8"
+uri = "file://artifacts/construccion-web/src/assets/project-4.png"
+type = "image"
+title = "Urban bridge structure"
+
+[[generated]]
+id = "0TWFRDBWo66uaPf05BlYH"
+uri = "file://artifacts/construccion-web/src/assets/project-5.png"
+type = "image"
+title = "Rehabilitated historic building"
+
+[[generated]]
+id = "sc-22ouvHQFWUx9XTRM_G"
+uri = "file://artifacts/construccion-web/src/assets/project-6.png"
+type = "image"
+title = "High-end commercial interior"
+
+[[generated]]
+id = "2mVgohCZem0hTArjA4TAn"
+uri = "file://artifacts/construccion-web/src/assets/blog-1.png"
+type = "image"
+title = "Architectural blueprints desk"
+
+[[generated]]
+id = "VtU6kYYJomsK3ajk1vCPW"
+uri = "file://artifacts/construccion-web/src/assets/blog-2.png"
+type = "image"
+title = "Poured concrete texture"
+
+[[generated]]
+id = "DS5EhUVFVb7xHtM50JFxL"
+uri = "file://artifacts/construccion-web/src/assets/blog-3.png"
+type = "image"
+title = "Worker silhouette sunset"

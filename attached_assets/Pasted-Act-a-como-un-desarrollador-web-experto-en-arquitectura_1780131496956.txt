@@ -1,0 +1,31 @@
+Actúa como un desarrollador web experto en arquitectura de sitios corporativos y diseño de alta gama. Necesito crear una página web profesional para una empresa de construcción, siguiendo una estructura lógica y moderna. Utiliza HTML5, CSS3 y JavaScript.
+
+Requerimientos de estructura y navegación:
+
+Sección Inicial (Carga): Al entrar, muestra una animación elegante de construcción que dé paso a la página principal. La cabecera debe ser persistente (sticky) e incluir: Logotipo de la empresa, un menú de navegación claro (Inicio, Proyectos, Conócenos, Servicios, Contacto, Blog) y una barra de búsqueda integrada.
+
+Introducción y Filosofía: Justo debajo, crea un espacio de introducción con texto inspirador que refleje el lema y la solidez de la empresa, asegurando una tipografía legible y profesional.
+
+Proyectos Recientes: Diseña una sección de proyectos con tarjetas interactivas que muestren trabajos realizados. Cada tarjeta debe incluir título, fecha y una descripción técnica. Los proyectos deben estar organizados de forma que el cliente pueda ver la calidad del trabajo.
+
+Apartados de Políticas y Legales: Crea una sección de footer completa y organizada con los siguientes subapartados: Políticas (Aviso legal, Política de cookies, Política de Protección de Datos, Política de Igualdad), RRSS (Enlaces a Pinterest, Linkedin, Instagram), contacto directo y 'Dónde encontrarnos'.
+
+Sección 'Conócenos': Crea una página interna o sección dedicada a la historia de la empresa (desde 2009), su misión, valores y el apartado 'Trabaja con nosotros'.
+
+Interacción y Contacto: Incluye un formulario de contacto profesional, datos de contacto directos (teléfono y correo) bien visibles, y un diseño enfocado en la experiencia del usuario (UX) que facilite la conversión.
+
+Estilo Visual:
+
+Utiliza un diseño limpio, sobrio y profesional, con tonos neutros y elementos visuales inspirados en la construcción (colores tipo cemento, blanco, negro o azul corporativo).
+
+El diseño debe ser totalmente responsive (adaptable a móviles, tablets y escritorio).
+
+Implementa un diseño elegante donde los elementos visuales se integren con el texto, permitiendo que las imágenes de los trabajos resalten.
+
+Notas técnicas:
+
+Organiza el código de forma modular (HTML separado de CSS y JS).
+
+Usa marcadores de posición (placeholders) de alta calidad para las imágenes.
+
+Asegúrate de que el buscador sea funcional y que todos los menús de navegación lleven a secciones claramente diferenciadas.
