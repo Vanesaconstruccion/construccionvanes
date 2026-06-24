@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -38,7 +38,8 @@ const PROJECT_TYPES = [
 export function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
   const {
     register,
@@ -50,9 +51,25 @@ export function Contact() {
     defaultValues: { nombre: "", empresa: "", email: "", telefono: "", tipoProyecto: "", mensaje: "" },
   });
 
-  const onSubmit = async (_data: ContactForm) => {
-    await new Promise((r) => setTimeout(r, 1000));
-    setSubmitted(true);
+  const onSubmit = async (data: ContactForm) => {
+    setStatus("idle");
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json() as { ok: boolean; error?: string };
+      if (json.ok) {
+        setStatus("success");
+      } else {
+        setErrorMsg(json.error ?? "Error al enviar. Inténtalo de nuevo.");
+        setStatus("error");
+      }
+    } catch {
+      setErrorMsg("Error de conexión. Inténtalo de nuevo.");
+      setStatus("error");
+    }
   };
 
   return (
@@ -137,7 +154,7 @@ export function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            {submitted ? (
+            {status === "success" ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -145,9 +162,9 @@ export function Contact() {
               >
                 <CheckCircle className="w-16 h-16 text-accent" />
                 <div>
-                  <h3 className="font-display font-bold text-2xl mb-2">Mensaje recibido</h3>
+                  <h3 className="font-display font-bold text-2xl mb-2">Mensaje enviado</h3>
                   <p className="text-muted-foreground max-w-sm">
-                    Gracias por contactar con nosotros. Nuestro equipo revisará tu consulta y te responderá en menos de 24 horas hábiles.
+                    Hemos recibido tu consulta. Te responderemos en menos de 24 horas hábiles a través del correo o teléfono que nos has facilitado.
                   </p>
                 </div>
               </motion.div>
@@ -233,6 +250,17 @@ export function Contact() {
                   />
                   {errors.mensaje && <p className="text-xs text-destructive">{errors.mensaje.message}</p>}
                 </div>
+
+                {status === "error" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex items-center gap-3 bg-destructive/10 border border-destructive/30 px-4 py-3 text-sm text-destructive"
+                  >
+                    <AlertCircle className="w-4 h-4 shrink-0" />
+                    {errorMsg}
+                  </motion.div>
+                )}
 
                 <Button
                   type="submit"
