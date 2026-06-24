@@ -51,7 +51,7 @@
 
 :root {
   /* Corporate Navy: 220 50% 15% */
-  /* Sharp Orange Accent: 24 95% 53% */
+  /* Turquoise Accent: 188 78% 40% */
   /* Concrete Gray: 220 10% 90% */
   
   --background: 220 20% 98%;
@@ -75,14 +75,14 @@
   --muted: 220 10% 96%;
   --muted-foreground: 220 10% 40%;
   
-  --accent: 24 95% 53%;
+  --accent: 188 78% 40%;
   --accent-foreground: 0 0% 100%;
   
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
   
   --input: 220 10% 85%;
-  --ring: 24 95% 53%;
+  --ring: 188 78% 40%;
   
   --app-font-sans: 'Inter', sans-serif;
   --app-font-display: 'Space Grotesk', sans-serif;
@@ -111,14 +111,14 @@
   --muted: 220 20% 15%;
   --muted-foreground: 220 10% 60%;
   
-  --accent: 24 95% 53%;
+  --accent: 188 78% 40%;
   --accent-foreground: 0 0% 100%;
   
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
   
   --input: 220 20% 25%;
-  --ring: 24 95% 53%;
+  --ring: 188 78% 40%;
 }
 
 @layer base {
