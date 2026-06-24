@@ -1,6 +1,3 @@
-import { SiPinterest, SiInstagram } from "react-icons/si";
-import { Linkedin } from "lucide-react";
-
 const LOGO_URL = "https://res.cloudinary.com/dwplp85za/image/upload/q_auto/f_auto/v1781630783/logo_empresa_de_construccion_mmfdiy.jpg";
 
 export function Footer() {
@@ -8,29 +5,13 @@ export function Footer() {
     <footer className="bg-primary text-primary-foreground pt-20 pb-10">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          {/* Brand */}
-          <div>
-            <div className="mb-6">
-              <img
-                src={LOGO_URL}
-                alt="Logo empresa"
-                className="h-14 w-auto object-contain brightness-0 invert"
-              />
-            </div>
-            <p className="text-primary-foreground/70 mb-6 max-w-sm">
-              Reformas integrales ejecutadas por un equipo de albañiles altamente cualificado para convertir tu inmueble en la realidad que imaginas.
-            </p>
-            <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors">
-                <SiInstagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors">
-                <SiPinterest className="w-5 h-5" />
-              </a>
-            </div>
+          {/* Brand / Logo */}
+          <div className="flex items-start justify-start">
+            <img
+              src={LOGO_URL}
+              alt="Logo Mivanjar Proyectos"
+              className="h-28 w-auto object-contain"
+            />
           </div>
 
           {/* Contacto Directo */}

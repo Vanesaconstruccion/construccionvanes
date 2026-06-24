@@ -42,9 +42,9 @@ export function Hero() {
               <span className="text-accent font-medium tracking-widest text-sm uppercase">Excelencia en Reformas Integrales</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white tracking-tighter leading-[1.1] mb-6">
-              FORJAMOS EL <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">FUTURO.</span>
+            <h1 className="font-display font-bold text-white tracking-tighter leading-tight mb-6">
+              <span className="block text-4xl md:text-5xl lg:text-6xl mb-2">MIVANJAR PROYECTOS SL</span>
+              <span className="block text-3xl md:text-4xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">FORJAMOS EL FUTURO.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10 font-light leading-relaxed">
