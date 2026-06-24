@@ -1,6 +1,8 @@
 import { SiPinterest, SiInstagram } from "react-icons/si";
 import { Linkedin } from "lucide-react";
 
+const LOGO_URL = "https://res.cloudinary.com/dwplp85za/image/upload/q_auto/f_auto/v1781630783/logo_empresa_de_construccion_mmfdiy.jpg";
+
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground pt-20 pb-10">
@@ -8,11 +10,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div>
-            <h3 className="font-display font-bold text-2xl tracking-tighter mb-6">
-              CONSTRUYE<span className="text-accent">.</span>
-            </h3>
+            <div className="mb-6">
+              <img
+                src={LOGO_URL}
+                alt="Logo empresa"
+                className="h-14 w-auto object-contain brightness-0 invert"
+              />
+            </div>
             <p className="text-primary-foreground/70 mb-6 max-w-sm">
-              Construyendo el futuro desde 2009. Arquitectura y construcción de precisión para proyectos que perduran.
+              Reformas integrales ejecutadas por un equipo de albañiles altamente cualificado para convertir tu inmueble en la realidad que imaginas.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors">
@@ -33,11 +39,11 @@ export function Footer() {
             <ul className="space-y-4 text-primary-foreground/70">
               <li>
                 <span className="block text-sm text-primary-foreground/50 mb-1">Teléfono</span>
-                <a href="tel:+34900000000" className="hover:text-accent transition-colors">+34 900 000 000</a>
+                <a href="tel:632522324" className="hover:text-accent transition-colors">632 522 324</a>
               </li>
               <li>
                 <span className="block text-sm text-primary-foreground/50 mb-1">Correo</span>
-                <a href="mailto:info@construye.es" className="hover:text-accent transition-colors">info@construye.es</a>
+                <a href="mailto:mivanjarproyectos.sl@gmail.com" className="hover:text-accent transition-colors break-all">mivanjarproyectos.sl@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -47,10 +53,9 @@ export function Footer() {
             <h4 className="font-display font-semibold text-lg mb-6 uppercase tracking-wider">Dónde Encontrarnos</h4>
             <ul className="space-y-4 text-primary-foreground/70">
               <li>
-                <span className="block text-sm text-primary-foreground/50 mb-1">Sede Central</span>
+                <span className="block text-sm text-primary-foreground/50 mb-1">Dirección</span>
                 <address className="not-italic">
-                  Paseo de la Castellana, 45<br />
-                  28046 Madrid, España
+                  Calle Hacienda de Pavones, 12, Local
                 </address>
               </li>
             </ul>
@@ -69,7 +74,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center text-sm text-primary-foreground/50">
-          <p>&copy; {new Date().getFullYear()} Construye S.L. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Mivanjar Proyectos S.L. Todos los derechos reservados.</p>
           <p className="mt-4 md:mt-0">Diseñado con precisión.</p>
         </div>
       </div>

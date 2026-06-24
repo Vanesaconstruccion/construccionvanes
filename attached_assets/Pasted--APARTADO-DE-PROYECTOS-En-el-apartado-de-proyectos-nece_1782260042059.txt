@@ -1,0 +1,94 @@
+*APARTADO DE PROYECTOS.
+-En el apartado de proyectos necesito que me cambies los 6 ejemplos que me has puesto sobre obra civil, proyectos comerciales, obra residencial, infraestructura, rehabilitación e industrial y me pongas en ese mismo formato ( o sea la imagen de portada,el título del proyecto, el subtítulo y la breve descripción) vas a cambiar uno por uno la información y las imágenes por esto:
+Ejemplo 1 : (lo cambias por el que dice obra civil Torre Meridiana)
+-SUBTITULO:Rehabilitación de Espacio Húmedo.
+ - Fecha de finalización del trabajo: Noviembre del 2024.
+-Título del proyecto:Diseño de baño en madrid.
+-Breve descripción:En esta intervención, buscamos transformar el baño en un espacio de relajación y modernidad. El proyecto destaca por la combinación de calidez y líneas minimalistas, logrando una atmósfera equilibrada y funcional.
+Como se puede apreciar en la imagen, el diseño integra un mueble de baño acabado en madera natural que aporta textura y calidez, contrastando de manera elegante con la grifería y perfilería en negro mate. La zona de ducha se ha resuelto con una mampara de cristal minimalista que maximiza la amplitud visual, complementada con una iluminación LED indirecta que realza los revestimientos neutros.
+El detalle técnico se observa en nuestra foto, donde la grifería termostática de ducha en color negro define el carácter moderno y sofisticado del conjunto. El resultado es un espacio optimizado, limpio y con una estética actual que combina durabilidad y diseño.
+
+-Foto de portada:https://res.cloudinary.com/dwplp85za/image/upload/v1782205653/rba%C3%B1o2.0_1_edtktu.webp 
+-Añádeme un pequeño menú de saber más en el que al pinchar nos desglose esta serie de imágenes del proyecto realizado.
+1.https://res.cloudinary.com/dwplp85za/image/upload/v1782205765/rba%C3%B1o2.0_4_telnit.webp 
+2.https://res.cloudinary.com/dwplp85za/image/upload/v1782205748/rba%C3%B1o2.0_3_x7lvky.webp 
+3.https://res.cloudinary.com/dwplp85za/image/upload/v1782205731/reba%C3%B1o2.0_2_ryhr6g.webp 
+
+Ejemplo 2 : (lo cambias por el que dice proyectos comerciales, Centro comercial Ágora).
+-SUBTÍTULO:Diseño, calidez y estilo rústico-contemporáneo en el hogar. 
+- Fecha de finalización del trabajo: Mayo del 2026.
+-Título del proyecto:Reforma Integral: Cocina de Autor y Aseo con Carácter 
+-Breve descripción: Este proyecto es una muestra de cómo el diseño puede elevar estancias cotidianas a través de texturas y una paleta de colores cuidadosamente seleccionada.
+En la cocina, el protagonismo recae en los tonos verdes suaves y la madera natural, creando un ambiente acogedor y familiar. La distribución, visible en la imagen, aprovecha al máximo la luz natural y ofrece un área de comedor integrada que invita al encuentro. Se ha buscado un equilibrio entre la estética clásica, reforzada por el papel pintado con motivos tradicionales, y la funcionalidad moderna, lograda con mobiliario de alta capacidad y acabados en tonos neutros como se observa.
+-Foto de portada:https://res.cloudinary.com/dwplp85za/image/upload/v1782240616/rcasa2_qvox6b.jpg 
+-Añádeme un pequeño menú de saber más en el que al pinchar nos desglose esta serie de imágenes del proyecto realizado.
+1.https://res.cloudinary.com/dwplp85za/image/upload/v1782240646/rcasa1_i7mccg.jpg 
+2.https://res.cloudinary.com/dwplp85za/image/upload/v1782240645/rcasa3_czdrj4.jpg 
+
+
+Ejemplo 3 : (lo cambias por el que dice obra residencial. Residencial el Pinar).
+-SUBTÍTULO:De espacios obsoletos a ambientes modernos, luminosos y funcionales. 
+- Fecha de finalización del trabajo: Abril del 2022.
+-Título del proyecto:Reforma Integral: Renovación Total de Cocina y Baño 
+-Breve descripción: Este proyecto es un ejemplo contundente de cómo una planificación adecuada puede cambiar por completo la habitabilidad de un hogar. La intervención ha transformado áreas que mostraban un desgaste notable en espacios contemporáneos, optimizando tanto la estética como la eficiencia.
+En la cocina, la metamorfosis es absoluta, hemos pasado de una configuración tradicional y desgastada a una cocina de líneas puras y minimalistas. La implementación de mobiliario blanco de alto brillo, la integración de electrodomésticos y el uso de suelos de imitación madera han aportado la amplitud y luminosidad que el espacio requería. La nueva distribución, mejora significativamente el flujo de trabajo y la organización.
+Por otro lado, el baño también ha experimentado un cambio radical. Al comparar el estado original con el resultado final, se aprecia una modernización integral: hemos sustituido la antigua bañera por un plato de ducha con mampara transparente, lo que aporta mayor seguridad y sensación de espacio, además de actualizar los revestimientos, el mueble de lavabo y la iluminación, logrando un ambiente limpio, actual y relajante.
+-Foto de portada:
+https://res.cloudinary.com/dwplp85za/image/upload/v1782240649/rcocina1_despues_guqsql.webp 
+-Añádeme un pequeño menú de saber más en el que al pinchar nos desglose esta serie de imágenes del proyecto realizado.
+1.https://res.cloudinary.com/dwplp85za/image/upload/v1782240648/rcocina3_antes_zw5ih0.webp 
+2.https://res.cloudinary.com/dwplp85za/image/upload/v1782240648/rcocina1_antes_bqtrlb.webp 
+3.https://res.cloudinary.com/dwplp85za/image/upload/v1782240648/rcocina2_antes_nebicr.webp 
+4.https://res.cloudinary.com/dwplp85za/image/upload/v1782240649/rba%C3%B1o2_antes_qlm8yt.webp 
+5.https://res.cloudinary.com/dwplp85za/image/upload/v1782240649/rcocina2_despues_uppbxz.webp 
+6.https://res.cloudinary.com/dwplp85za/image/upload/v1782240649/rcocina3_despues_jvvijh.webp 
+7.https://res.cloudinary.com/dwplp85za/image/upload/v1782240649/rba%C3%B1o2_despu%C3%A9s_oqf7xl.webp 
+Ejemplo 4: (lo cambias por el que dice Infraestructura, Hospital Universitario Norte).
+-SUBTÍTULO:Transformación total de espacios interiores.
+- Fecha de finalización del trabajo: 12 de septiembre de 2025.
+-Título del proyecto:Reforma Integral: Diseño de Vanguardia, Calidez y Funcionalidad 
+-Breve descripción: Este proyecto se ha enfocado en maximizar la luminosidad y la armonía visual mediante una intervención integral que redefine la estética de la vivienda.
+El elemento protagonista es la escalera, que ha sido completamente renovada para convertirse en una pieza de diseño contemporáneo. La combinación de escalones de madera natural con una estructura metálica negra y cerramientos de vidrio aporta una ligereza visual que conecta los niveles de forma elegante y segura.
+La zona social se ha integrado bajo un concepto de diseño limpio y minimalista, donde la calidez de los tonos madera en el suelo armoniza perfectamente con la sobriedad de los elementos estructurales.
+Como complemento, se ha ejecutado una renovación completa del baño, optando por un estilo moderno con mueble suspendido en acabado madera, grifería en negro mate y un diseño optimizado que prioriza el confort y el aprovechamiento del espacio.
+
+-Foto de portada:https://res.cloudinary.com/dwplp85za/image/upload/v1782240648/rescalera1_voszwo.webp 
+-Añádeme un pequeño menú de saber más en el que al pinchar nos desglose esta serie de imágenes del proyecto realizado.
+1.https://res.cloudinary.com/dwplp85za/image/upload/v1782240648/rescalera2_owo2d8.webp 
+2.https://res.cloudinary.com/dwplp85za/image/upload/v1782240647/rescalera3_grqbar.webp 
+3.https://res.cloudinary.com/dwplp85za/image/upload/v1782240647/rescalera4_bs8ily.webp 
+Ejemplo 5: (lo cambias por el que dice rehabilitación, Pasaje Vienés).
+-SUBTÍTULO:Renovación completa que equilibra la funcionalidad moderna 
+- Fecha de finalización del trabajo: 15 abril 2025.
+-Título del proyecto:Reforma Integral: Diseño, Calidez y Espacios Conectados 
+-Breve descripción:  Este proyecto ha transformado la vivienda en un hogar contemporáneo, integrando soluciones de diseño a medida que aprovechan al máximo cada metro cuadrado.
+Espacios Exteriores y de Vida: Se ha creado una zona exterior polivalente, que combina áreas de descanso y una ducha exterior, diseñada para el máximo confort. En el interior, la reforma se centra en la calidez de los materiales, destacando los suelos de madera en espiga y las vistas despejadas que conectan la vivienda con el entorno.
+Diseño de Baños: La intervención en los baños, detallada refleja una estética sofisticada. Se ha apostado por muebles de baño con acabados en madera, grifería en negro mate, espejos retroiluminados y una iluminación ambiental estratégica que aporta una sensación de bienestar y amplitud.
+Funcionalidad: Cada rincón ha sido optimizado, integrando armarios y elementos de almacenamiento que mantienen la pulcritud y el orden sin comprometer el estilo visual del proyecto.
+
+-Foto de portada:https://res.cloudinary.com/dwplp85za/image/upload/v1782240644/casa1_thcahk.jpg 
+-Añádeme un pequeño menú de saber más en el que al pinchar nos desglose esta serie de imágenes del proyecto realizado.
+1.https://res.cloudinary.com/dwplp85za/image/upload/v1782240644/casa6_q9rdo1.jpg 
+2.https://res.cloudinary.com/dwplp85za/image/upload/v1782240644/reforma1_qzzdc9.jpg 
+3.https://res.cloudinary.com/dwplp85za/image/upload/v1782240647/rba%C3%B1o2.0_1_sgxk8v.webp 
+4.https://res.cloudinary.com/dwplp85za/image/upload/v1782240647/reba%C3%B1o2.0_2_rstxru.webp 
+5.https://res.cloudinary.com/dwplp85za/image/upload/v1782240646/rba%C3%B1o2.1_2_hqd8at.jpg 
+6.https://res.cloudinary.com/dwplp85za/image/upload/v1782240646/rba%C3%B1o2.1_1_k59gf2.jpg 
+
+Ejemplo 6: (lo cambias por el que dice Industrial, Parque logístico Sur).
+-SUBTÍTULO:transformación radical que revaloriza la vivienda mediante la limpieza visual.
+- Fecha de finalización del trabajo: Junio del 2025.
+-Título del proyecto:Reforma Integral: Del Caos Funcional a la Serenidad Moderna.
+-Breve descripción:  Este proyecto es un claro ejemplo de cómo una intervención integral puede alterar completamente la percepción y calidad de vida en un hogar. La propuesta se ha centrado en eliminar la saturación visual, sustituyendo elementos antiguos por una estética minimalista y luminosa.
+Reforma de Zona Social y Cocina: La transición es evidente al comparar el estado original, que presentaba espacios fragmentados y suelos con patrones cargados,con el resultado final. Hemos unificado los suelos mediante tarima de madera clara, eliminando distracciones visuales y creando una sensación de amplitud y continuidad. La nueva cocina, apuesta por una paleta de tonos neutros, líneas puras y una iluminación integrada que aporta una elegancia sofisticada.
+Baño: La renovación del baño marca un antes y un después absoluto. El diseño final que se aprecia, sustituye elementos obsoletos por una atmósfera tipo "spa", utilizando grifería en acabado dorado mate, espejos circulares retroiluminados y revestimientos de gran formato que maximizan la sensación de higiene y orden.
+Impacto Visual: Al comparar el estado previo de la cocina con la propuesta final, se observa cómo la reconfiguración del espacio y la elección de acabados de alta calidad son fundamentales para convertir una vivienda en un entorno de calma y funcionalidad moderna.
+
+-Foto de portada:https://res.cloudinary.com/dwplp85za/image/upload/v1782240645/rcasadespues_1_zbqcgc.jpg 
+-Añádeme un pequeño menú de saber más en el que al pinchar nos desglose esta serie de imágenes del proyecto realizado.
+1.https://res.cloudinary.com/dwplp85za/image/upload/v1782240645/rcasaantes_1_i2cpmp.jpg 
+2.https://res.cloudinary.com/dwplp85za/image/upload/v1782240645/rcasaantes_3_fv8boi.jpg 
+3.https://res.cloudinary.com/dwplp85za/image/upload/v1782240645/rcasadespues_2_un3xfi.jpg 
+4.https://res.cloudinary.com/dwplp85za/image/upload/v1782240645/rcasadespues_3_fjuy0k.jpg 
+5.https://res.cloudinary.com/dwplp85za/image/upload/v1782240645/rcasa3_czdrj4.jpg 
+

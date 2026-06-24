@@ -29,12 +29,9 @@ const contactSchema = z.object({
 type ContactForm = z.infer<typeof contactSchema>;
 
 const PROJECT_TYPES = [
-  "Obra Civil",
-  "Rehabilitación",
-  "Proyecto Comercial",
-  "Reforma Interior",
-  "Industrial y Logística",
-  "Construcción Sostenible",
+  "Reforma Integral",
+  "Albañilería y Acabados",
+  "Montaje y Equipamiento",
   "Otro",
 ];
 
@@ -89,10 +86,10 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground tracking-widest uppercase mb-1">Teléfono</p>
-                  <a href="tel:+34900000000" className="text-lg font-medium text-foreground hover:text-accent transition-colors">
-                    +34 900 000 000
+                  <a href="tel:632522324" className="text-lg font-medium text-foreground hover:text-accent transition-colors">
+                    632 522 324
                   </a>
-                  <p className="text-sm text-muted-foreground mt-0.5">Lun–Vie 8:30 – 18:00</p>
+                  <p className="text-sm text-muted-foreground mt-0.5">Lun–Sáb 8:30 – 21:00</p>
                 </div>
               </motion.div>
 
@@ -108,8 +105,8 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground tracking-widest uppercase mb-1">Correo Electrónico</p>
-                  <a href="mailto:info@construye.es" className="text-lg font-medium text-foreground hover:text-accent transition-colors">
-                    info@construye.es
+                  <a href="mailto:mivanjarproyectos.sl@gmail.com" className="text-lg font-medium text-foreground hover:text-accent transition-colors break-all">
+                    mivanjarproyectos.sl@gmail.com
                   </a>
                 </div>
               </motion.div>
@@ -127,10 +124,8 @@ export function Contact() {
                 <div>
                   <p className="text-xs text-muted-foreground tracking-widest uppercase mb-1">Dónde Encontrarnos</p>
                   <address className="not-italic text-lg font-medium text-foreground">
-                    Paseo de la Castellana, 45<br />
-                    28046 Madrid, España
+                    Calle Hacienda de Pavones, 12, Local
                   </address>
-                  <p className="text-sm text-muted-foreground mt-0.5">Sede Central</p>
                 </div>
               </motion.div>
             </div>
@@ -200,7 +195,7 @@ export function Contact() {
                     <Input
                       id="telefono"
                       type="tel"
-                      placeholder="+34 600 000 000"
+                      placeholder="600 000 000"
                       {...register("telefono")}
                       className="rounded-none h-12"
                       data-testid="input-telefono"
@@ -230,7 +225,7 @@ export function Contact() {
                   <Label htmlFor="mensaje">Mensaje *</Label>
                   <Textarea
                     id="mensaje"
-                    placeholder="Cuéntanos los detalles de tu proyecto: ubicación, superficie aproximada, plazos, presupuesto orientativo..."
+                    placeholder="Cuéntanos los detalles de tu reforma: tipo de espacio, metros aproximados, plazos, presupuesto orientativo..."
                     rows={5}
                     {...register("mensaje")}
                     className="rounded-none resize-none"

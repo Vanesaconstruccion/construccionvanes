@@ -4,12 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
+const LOGO_URL = "https://res.cloudinary.com/dwplp85za/image/upload/q_auto/f_auto/v1781630783/logo_empresa_de_construccion_mmfdiy.jpg";
+
 const NAV_LINKS = [
   { label: "Inicio", href: "#inicio" },
   { label: "Proyectos", href: "#proyectos" },
   { label: "Conócenos", href: "#conocenos" },
   { label: "Servicios", href: "#servicios" },
-  { label: "Blog", href: "#blog" },
   { label: "Contacto", href: "#contacto" },
 ];
 
@@ -40,8 +41,6 @@ export function Navbar() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (!searchQuery) return;
-    
-    // Very basic in-page search implementation
     (window as Window & { find?: (text: string) => void }).find?.(searchQuery);
   };
 
@@ -51,7 +50,7 @@ export function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, delay: 2.5 }}
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm py-4" : "bg-transparent py-6"
+        isScrolled ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-4 md:px-8">
@@ -59,12 +58,14 @@ export function Navbar() {
           <a
             href="#inicio"
             onClick={(e) => handleNavClick(e, "#inicio")}
-            className={`font-display font-bold text-2xl tracking-tighter ${
-              isScrolled ? "text-foreground" : "text-white"
-            }`}
+            className="shrink-0"
+            data-testid="link-logo"
           >
-            CONSTRUYE
-            <span className="text-accent">.</span>
+            <img
+              src={LOGO_URL}
+              alt="Logo empresa"
+              className={`object-contain transition-all duration-300 ${isScrolled ? "h-12" : "h-14"}`}
+            />
           </a>
 
           {/* Desktop Nav */}
@@ -84,7 +85,7 @@ export function Navbar() {
                 </li>
               ))}
             </ul>
-            
+
             <div className="flex items-center">
               <AnimatePresence>
                 {isSearchOpen && (
