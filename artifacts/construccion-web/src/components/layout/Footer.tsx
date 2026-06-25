@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 const LOGO_URL = "https://res.cloudinary.com/dwplp85za/image/upload/q_auto/f_auto/v1781630783/logo_empresa_de_construccion_mmfdiy.jpg";
 
 export function Footer() {
@@ -42,21 +44,30 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Políticas */}
+          {/* Legal */}
           <div>
             <h4 className="font-display font-semibold text-lg mb-6 uppercase tracking-wider">Legal</h4>
             <ul className="space-y-3 text-primary-foreground/70">
-              <li><a href="#" className="hover:text-accent transition-colors">Aviso Legal</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Política de Privacidad</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Política de Cookies</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Política de Igualdad</a></li>
+              <li>
+                <Link href="/privacidad" className="hover:text-accent transition-colors">
+                  Política de Privacidad
+                </Link>
+              </li>
+              <li>
+                <Link href="/cookies" className="hover:text-accent transition-colors">
+                  Política de Cookies
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center text-sm text-primary-foreground/50">
+        <div className="pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center text-sm text-primary-foreground/50 gap-4">
           <p>&copy; {new Date().getFullYear()} Mivanjar Proyectos S.L. Todos los derechos reservados.</p>
-          <p className="mt-4 md:mt-0">Diseñado con precisión.</p>
+          <div className="flex gap-6">
+            <Link href="/privacidad" className="hover:text-primary-foreground/80 transition-colors">Privacidad</Link>
+            <Link href="/cookies" className="hover:text-primary-foreground/80 transition-colors">Cookies</Link>
+          </div>
         </div>
       </div>
     </footer>

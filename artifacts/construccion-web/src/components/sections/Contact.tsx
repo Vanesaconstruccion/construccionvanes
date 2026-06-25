@@ -1,10 +1,10 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Phone, Mail, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
-import { useState } from "react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -24,6 +24,9 @@ const contactSchema = z.object({
   telefono: z.string().min(9, "Introduce un teléfono válido"),
   tipoProyecto: z.string().min(1, "Selecciona el tipo de proyecto"),
   mensaje: z.string().min(20, "El mensaje debe tener al menos 20 caracteres"),
+  privacidad: z.boolean().refine((v) => v === true, {
+    message: "Debes aceptar la política de privacidad para continuar",
+  }),
 });
 
 type ContactForm = z.infer<typeof contactSchema>;
@@ -48,7 +51,15 @@ export function Contact() {
     formState: { errors, isSubmitting },
   } = useForm<ContactForm>({
     resolver: zodResolver(contactSchema),
-    defaultValues: { nombre: "", empresa: "", email: "", telefono: "", tipoProyecto: "", mensaje: "" },
+    defaultValues: {
+      nombre: "",
+      empresa: "",
+      email: "",
+      telefono: "",
+      tipoProyecto: "",
+      mensaje: "",
+      privacidad: false,
+    },
   });
 
   const onSubmit = async (data: ContactForm) => {
@@ -96,7 +107,6 @@ export function Contact() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.2 }}
                 className="flex items-start gap-4"
-                data-testid="contact-phone"
               >
                 <div className="w-12 h-12 bg-accent/10 flex items-center justify-center shrink-0">
                   <Phone className="w-5 h-5 text-accent" />
@@ -115,7 +125,6 @@ export function Contact() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.3 }}
                 className="flex items-start gap-4"
-                data-testid="contact-email"
               >
                 <div className="w-12 h-12 bg-accent/10 flex items-center justify-center shrink-0">
                   <Mail className="w-5 h-5 text-accent" />
@@ -133,7 +142,6 @@ export function Contact() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.4 }}
                 className="flex items-start gap-4"
-                data-testid="contact-address"
               >
                 <div className="w-12 h-12 bg-accent/10 flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5 text-accent" />
@@ -169,7 +177,7 @@ export function Contact() {
                 </div>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" data-testid="form-contact">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="space-y-1.5">
                     <Label htmlFor="nombre">Nombre *</Label>
@@ -178,7 +186,6 @@ export function Contact() {
                       placeholder="Tu nombre"
                       {...register("nombre")}
                       className="rounded-none h-12"
-                      data-testid="input-nombre"
                     />
                     {errors.nombre && <p className="text-xs text-destructive">{errors.nombre.message}</p>}
                   </div>
@@ -189,7 +196,6 @@ export function Contact() {
                       placeholder="Nombre de empresa"
                       {...register("empresa")}
                       className="rounded-none h-12"
-                      data-testid="input-empresa"
                     />
                   </div>
                 </div>
@@ -203,7 +209,6 @@ export function Contact() {
                       placeholder="tu@email.com"
                       {...register("email")}
                       className="rounded-none h-12"
-                      data-testid="input-email"
                     />
                     {errors.email && <p className="text-xs text-destructive">{errors.email.message}</p>}
                   </div>
@@ -215,7 +220,6 @@ export function Contact() {
                       placeholder="600 000 000"
                       {...register("telefono")}
                       className="rounded-none h-12"
-                      data-testid="input-telefono"
                     />
                     {errors.telefono && <p className="text-xs text-destructive">{errors.telefono.message}</p>}
                   </div>
@@ -223,8 +227,8 @@ export function Contact() {
 
                 <div className="space-y-1.5">
                   <Label htmlFor="tipoProyecto">Tipo de Proyecto *</Label>
-                  <Select onValueChange={(val) => setValue("tipoProyecto", val)}>
-                    <SelectTrigger className="rounded-none h-12" data-testid="select-tipo-proyecto">
+                  <Select onValueChange={(val) => setValue("tipoProyecto", val, { shouldValidate: true })}>
+                    <SelectTrigger className="rounded-none h-12">
                       <SelectValue placeholder="Selecciona el tipo de proyecto" />
                     </SelectTrigger>
                     <SelectContent>
@@ -246,9 +250,34 @@ export function Contact() {
                     rows={5}
                     {...register("mensaje")}
                     className="rounded-none resize-none"
-                    data-testid="textarea-mensaje"
                   />
                   {errors.mensaje && <p className="text-xs text-destructive">{errors.mensaje.message}</p>}
+                </div>
+
+                {/* Privacy checkbox */}
+                <div className="space-y-1.5">
+                  <label className="flex items-start gap-3 cursor-pointer group">
+                    <input
+                      type="checkbox"
+                      {...register("privacidad")}
+                      className="mt-0.5 w-4 h-4 shrink-0 accent-[hsl(var(--accent))] cursor-pointer"
+                    />
+                    <span className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors">
+                      He leído y acepto la{" "}
+                      <Link
+                        href="/privacidad"
+                        target="_blank"
+                        className="text-accent hover:underline underline-offset-2 font-medium"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        política de privacidad
+                      </Link>{" "}
+                      *
+                    </span>
+                  </label>
+                  {errors.privacidad && (
+                    <p className="text-xs text-destructive ml-7">{errors.privacidad.message}</p>
+                  )}
                 </div>
 
                 {status === "error" && (
@@ -267,7 +296,6 @@ export function Contact() {
                   size="lg"
                   disabled={isSubmitting}
                   className="w-full bg-accent hover:bg-accent/90 text-white rounded-none h-14 text-base tracking-wide gap-2"
-                  data-testid="button-submit"
                 >
                   {isSubmitting ? (
                     "Enviando..."
@@ -277,11 +305,6 @@ export function Contact() {
                     </>
                   )}
                 </Button>
-
-                <p className="text-xs text-muted-foreground text-center">
-                  Al enviar este formulario aceptas nuestra{" "}
-                  <a href="#" className="text-accent hover:underline">Política de Protección de Datos</a>.
-                </p>
               </form>
             )}
           </motion.div>
