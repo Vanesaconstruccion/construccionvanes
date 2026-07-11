@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Phone, Mail, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { Link } from "wouter";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -38,6 +39,10 @@ const PROJECT_TYPES = [
   "Otro",
 ];
 
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string;
+
 export function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -48,6 +53,7 @@ export function Contact() {
     register,
     handleSubmit,
     setValue,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm<ContactForm>({
     resolver: zodResolver(contactSchema),
@@ -64,21 +70,31 @@ export function Contact() {
 
   const onSubmit = async (data: ContactForm) => {
     setStatus("idle");
+
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      setErrorMsg("Servicio de correo no configurado. Contacta directamente al 632 522 324.");
+      setStatus("error");
+      return;
+    }
+
     try {
-      const res = await fetch(`${import.meta.env.BASE_URL}api/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      const json = await res.json() as { ok: boolean; error?: string };
-      if (json.ok) {
-        setStatus("success");
-      } else {
-        setErrorMsg(json.error ?? "Error al enviar. Inténtalo de nuevo.");
-        setStatus("error");
-      }
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          nombre: data.nombre,
+          empresa: data.empresa ?? "—",
+          email: data.email,
+          telefono: data.telefono,
+          tipo_proyecto: data.tipoProyecto,
+          mensaje: data.mensaje,
+        },
+        EMAILJS_PUBLIC_KEY,
+      );
+      setStatus("success");
+      reset();
     } catch {
-      setErrorMsg("Error de conexión. Inténtalo de nuevo.");
+      setErrorMsg("No se pudo enviar el mensaje. Inténtalo de nuevo o llámanos al 632 522 324.");
       setStatus("error");
     }
   };
@@ -172,9 +188,15 @@ export function Contact() {
                 <div>
                   <h3 className="font-display font-bold text-2xl mb-2">Mensaje enviado</h3>
                   <p className="text-muted-foreground max-w-sm">
-                    Hemos recibido tu consulta. Te responderemos en menos de 24 horas hábiles a través del correo o teléfono que nos has facilitado.
+                    Hemos recibido tu consulta. Te responderemos en menos de 24 horas hábiles.
                   </p>
                 </div>
+                <button
+                  onClick={() => setStatus("idle")}
+                  className="text-sm text-accent hover:underline"
+                >
+                  Enviar otro mensaje
+                </button>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
@@ -298,7 +320,10 @@ export function Contact() {
                   className="w-full bg-accent hover:bg-accent/90 text-white rounded-none h-14 text-base tracking-wide gap-2"
                 >
                   {isSubmitting ? (
-                    "Enviando..."
+                    <span className="flex items-center gap-2">
+                      <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      Enviando...
+                    </span>
                   ) : (
                     <>
                       Enviar Consulta <Send className="w-4 h-4" />
